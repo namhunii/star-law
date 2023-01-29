@@ -14,11 +14,12 @@ for i in range(31):
     
 date=data
 
+##################################
 
 print("-----------통합검색 카테고리1~3 비교 -------------------- ")
 
-client_id = input("id를 입력하세요 : ") #"rzF6rvrj3TniBxK_WrTw"
-client_secret = input("비밀번호를 입력하세요 : ")  #"xeMb9gVdrv"
+client_id = input("id를 입력하세요 : ") 
+client_secret = input("비밀번호를 입력하세요 : ")
 url = "https://openapi.naver.com/v1/datalab/search"
 body = "{\"startDate\":\"2022-12-01\",\"endDate\":\"2022-12-31\",\"timeUnit\":\"date\",\"keywordGroups\":[{\"groupName\":\"회생\",\"keywords\":[\"개인회생\",\"대구개인회생\",\"대구개인회생전문\",\"개인회생신청자격\",\"개인회생전문\"]},{\"groupName\":\"이혼\",\"keywords\":[\"대구이혼변호사\",\"대구이혼전문변호사\",\"대구이혼상담\",\"이혼전문변호사\",\"이혼변호사\"]},{\"groupName\":\"음주\",\"keywords\":[\"음주운전\",\"음주행정\",\"음주형사\",\"대구음주운전전문\",\"음주운전변호사\"]}]}";
 request = urllib.request.Request(url)
@@ -45,11 +46,12 @@ a= pd.DataFrame({'date':date,
         '음주':ratio_data3})
 
 
+###########################
 
 print("-----------PC검색 카테고리1~3 비교 -------------------- ")
 
-client_id = input("id를 입력하세요 : ") #"rzF6rvrj3TniBxK_WrTw"
-client_secret = input("비밀번호를 입력하세요 : ")  #"xeMb9gVdrv"
+client_id = input("id를 입력하세요 : ") 
+client_secret = input("비밀번호를 입력하세요 : ") 
 url = "https://openapi.naver.com/v1/datalab/search"
 body = "{\"startDate\":\"2022-12-01\",\"endDate\":\"2022-12-31\",\"timeUnit\":\"date\",\"keywordGroups\":[{\"groupName\":\"회생\",\"keywords\":[\"개인회생\",\"대구개인회생\",\"대구개인회생전문\",\"개인회생신청자격\",\"개인회생전문\"]},{\"groupName\":\"이혼\",\"keywords\":[\"대구이혼변호사\",\"대구이혼전문변호사\",\"대구이혼상담\",\"이혼전문변호사\",\"이혼변호사\"]},{\"groupName\":\"음주\",\"keywords\":[\"음주운전\",\"음주행정\",\"음주형사\",\"대구음주운전전문\",\"음주운전변호사\"]}],\"device\":\"pc\"}";
 request = urllib.request.Request(url)
@@ -76,10 +78,12 @@ a= pd.DataFrame({'date':date,
         '음주':ratio_data3})
 
 
+#########################
+
 print("-----------Mobile검색 카테고리1~3 비교 -------------------- ")
 
-client_id = input("id를 입력하세요 : ") #"rzF6rvrj3TniBxK_WrTw"
-client_secret = input("비밀번호를 입력하세요 : ")  #"xeMb9gVdrv"
+client_id = input("id를 입력하세요 : ") 
+client_secret = input("비밀번호를 입력하세요 : ") 
 url = "https://openapi.naver.com/v1/datalab/search"
 body = "{\"startDate\":\"2022-12-01\",\"endDate\":\"2022-12-31\",\"timeUnit\":\"date\",\"keywordGroups\":[{\"groupName\":\"회생\",\"keywords\":[\"개인회생\",\"대구개인회생\",\"대구개인회생전문\",\"개인회생신청자격\",\"개인회생전문\"]},{\"groupName\":\"이혼\",\"keywords\":[\"대구이혼변호사\",\"대구이혼전문변호사\",\"대구이혼상담\",\"이혼전문변호사\",\"이혼변호사\"]},{\"groupName\":\"음주\",\"keywords\":[\"음주운전\",\"음주행정\",\"음주형사\",\"대구음주운전전문\",\"음주운전변호사\"]}],\"device\":\"mo\"}";
 request = urllib.request.Request(url)
@@ -106,11 +110,12 @@ a= pd.DataFrame({'date':date,
         '음주':ratio_data3})
 
 
+#################################
 
 print("-----------통합검색 회생 카테고리 비교 -------------------- ")
 
-client_id = input("id를 입력하세요 : ") #"rzF6rvrj3TniBxK_WrTw"
-client_secret = input("비밀번호를 입력하세요 : ")  #"xeMb9gVdrv"
+client_id = input("id를 입력하세요 : ") 
+client_secret = input("비밀번호를 입력하세요 : ") 
 url = "https://openapi.naver.com/v1/datalab/search"
 body = "{\"startDate\":\"2022-12-01\",\"endDate\":\"2022-12-31\",\"timeUnit\":\"date\",\"keywordGroups\":[{\"groupName\":\"개인회생\",\"keywords\":[\"개인회생\"]},{\"groupName\":\"대구개인회생\",\"keywords\":[\"대구개인회생\"]},{\"groupName\":\"대구개인회생전문\",\"keywords\":[\"대구개인회생전문\"]},{\"groupName\":\"개인회생신청자격\",\"keywords\":[\"개인회생신청자격\"]},{\"groupName\":\"개인회생전문\",\"keywords\":[\"개인회생전문\"]}]}";
 request = urllib.request.Request(url)
@@ -162,11 +167,12 @@ merge_outer3=pd.merge(merge_outer1,merge_outer2, how='outer', on='date')
 total=pd.merge(merge_outer3,e, how='outer', on='date')
 
 
+################################
 
 print("-----------통합검색 이혼 카테고리 비교 -------------------- ")
 
-client_id = input("id를 입력하세요 : ") #"rzF6rvrj3TniBxK_WrTw"
-client_secret = input("비밀번호를 입력하세요 : ")  #"xeMb9gVdrv"
+client_id = input("id를 입력하세요 : ") 
+client_secret = input("비밀번호를 입력하세요 : ") 
 url = "https://openapi.naver.com/v1/datalab/search"
 body = "{\"startDate\":\"2022-12-01\",\"endDate\":\"2022-12-31\",\"timeUnit\":\"date\",\"keywordGroups\":[{\"groupName\":\"대구이혼변호사\",\"keywords\":[\"대구이혼변호사\"]},{\"groupName\":\"대구이혼전문변호사\",\"keywords\":[\"대구이혼전문변호사\"]},{\"groupName\":\"대구이혼상담\",\"keywords\":[\"대구이혼상담\"]},{\"groupName\":\"이혼전문변호사\",\"keywords\":[\"이혼전문변호사\"]},{\"groupName\":\"이혼변호사\",\"keywords\":[\"이혼변호사\"]}]}";
 request = urllib.request.Request(url)
@@ -217,10 +223,13 @@ merge_outer33=pd.merge(merge_outer11,merge_outer22, how='outer', on='date')
 total1=pd.merge(merge_outer33,e1, how='outer', on='date')
 
 
+###############################
+
+
 print("-----------통합검색 음주 카테고리 비교 -------------------- ")
 
-client_id = input("id를 입력하세요 : ") #"rzF6rvrj3TniBxK_WrTw"
-client_secret = input("비밀번호를 입력하세요 : ")  #"xeMb9gVdrv"
+client_id = input("id를 입력하세요 : ") 
+client_secret = input("비밀번호를 입력하세요 : ") 
 url = "https://openapi.naver.com/v1/datalab/search"
 body = "{\"startDate\":\"2022-12-01\",\"endDate\":\"2022-12-31\",\"timeUnit\":\"date\",\"keywordGroups\":[{\"groupName\":\"음주운전\",\"keywords\":[\"음주운전\"]},{\"groupName\":\"음주행정\",\"keywords\":[\"음주행정\"]},{\"groupName\":\"음주형사\",\"keywords\":[\"음주형사\"]},{\"groupName\":\"대구음주운전전문\",\"keywords\":[\"대구음주운전전문\"]},{\"groupName\":\"음주운전변호사\",\"keywords\":[\"음주운전변호사\"]}]}";
 request = urllib.request.Request(url)
@@ -270,10 +279,10 @@ merge_outer222=pd.merge(c2,d2, how='outer', on='date')
 merge_outer333=pd.merge(merge_outer111,merge_outer222, how='outer', on='date')
 total2=pd.merge(merge_outer333,e2, how='outer', on='date')
 
+##############################
 
 merge_01=pd.merge(total,total1, how='outer', on='date')
 total012=pd.merge(merge_01,total2, how='outer', on='date')
-
 
 
 print("---------------통합검색 모든 카테고리 안에서 각 키워드가 차지하는 비율------------------")
@@ -301,6 +310,7 @@ total012['음주형사비율']=(total012['음주형사']/total012['합계'])*100
 total012['대구음주운전전문비율']=(total012['대구음주운전전문']/total012['합계'])*100
 total012['음주운전변호사비율']=(total012['음주운전변호사']/total012['합계'])*100
 
+######################
 
 print("---------------통합검색 회생 카테고리 안에서 각 키워드가 차지하는 비율------------------")
 total=total.fillna(0)
@@ -311,7 +321,7 @@ total['대구개인회생전문비율']=(total['대구개인회생전문']/total
 total['개인회생신청자격비율']=(total['개인회생신청자격']/total['합계'])*100
 total['개인회생전문비율']=(total['개인회생전문']/total['합계'])*100
 
-
+#######################
 
 print("---------------통합검색 이혼 카테고리 안에서 각 키워드가 차지하는 비율------------------")
 total1=total1.fillna(0)
@@ -322,7 +332,7 @@ total1['대구이혼상담비율']=(total1['대구이혼상담']/total1['합계'
 total1['이혼전문변호사비율']=(total1['이혼전문변호사']/total1['합계'])*100
 total1['이혼변호사비율']=(total1['이혼변호사']/total1['합계'])*100
 
-
+########################
 
 print("---------------통합검색 음주 카테고리 안에서 각 키워드가 차지하는 비율------------------")
 total2=total2.fillna(0)
@@ -333,11 +343,12 @@ total2['음주형사비율']=(total2['음주형사']/total2['합계'])*100
 total2['대구음주운전전문비율']=(total2['대구음주운전전문']/total2['합계'])*100
 total2['음주운전변호사비율']=(total2['음주운전변호사']/total2['합계'])*100
 
+############################
 
 print("---------- PC 검색 회생 카테고리 비교 -------------------- ")
 
-client_id = input("id를 입력하세요 : ") #"rzF6rvrj3TniBxK_WrTw"
-client_secret = input("비밀번호를 입력하세요 : ")  #"xeMb9gVdrv"
+client_id = input("id를 입력하세요 : ") 
+client_secret = input("비밀번호를 입력하세요 : ") 
 url = "https://openapi.naver.com/v1/datalab/search"
 body = "{\"startDate\":\"2022-12-01\",\"endDate\":\"2022-12-31\",\"timeUnit\":\"date\",\"keywordGroups\":[{\"groupName\":\"개인회생\",\"keywords\":[\"개인회생\"]},{\"groupName\":\"대구개인회생\",\"keywords\":[\"대구개인회생\"]},{\"groupName\":\"대구개인회생전문\",\"keywords\":[\"대구개인회생전문\"]},{\"groupName\":\"개인회생신청자격\",\"keywords\":[\"개인회생신청자격\"]},{\"groupName\":\"개인회생전문\",\"keywords\":[\"개인회생전문\"]}],\"device\":\"pc\"}";
 request = urllib.request.Request(url)
@@ -388,12 +399,12 @@ merge_outer2p=pd.merge(cp,dp, how='outer', on='date')
 merge_outer3p=pd.merge(merge_outer1p,merge_outer2p, how='outer', on='date')
 totalp=pd.merge(merge_outer3p,ep, how='outer', on='date')
 
-
+##############################
 
 print("-----------PC검색 이혼 카테고리 비교 -------------------- ")
 
-client_id = input("id를 입력하세요 : ") #"rzF6rvrj3TniBxK_WrTw"
-client_secret = input("비밀번호를 입력하세요 : ")  #"xeMb9gVdrv"
+client_id = input("id를 입력하세요 : ") 
+client_secret = input("비밀번호를 입력하세요 : ") 
 url = "https://openapi.naver.com/v1/datalab/search"
 body = "{\"startDate\":\"2022-12-01\",\"endDate\":\"2022-12-31\",\"timeUnit\":\"date\",\"keywordGroups\":[{\"groupName\":\"대구이혼변호사\",\"keywords\":[\"대구이혼변호사\"]},{\"groupName\":\"대구이혼전문변호사\",\"keywords\":[\"대구이혼전문변호사\"]},{\"groupName\":\"대구이혼상담\",\"keywords\":[\"대구이혼상담\"]},{\"groupName\":\"이혼전문변호사\",\"keywords\":[\"이혼전문변호사\"]},{\"groupName\":\"이혼변호사\",\"keywords\":[\"이혼변호사\"]}],\"device\":\"pc\"}";
 request = urllib.request.Request(url)
@@ -443,12 +454,12 @@ merge_outer22p=pd.merge(cp1,dp1, how='outer', on='date')
 merge_outer33p=pd.merge(merge_outer11p,merge_outer22p, how='outer', on='date')
 totalp1=pd.merge(merge_outer33p,ep1, how='outer', on='date')
 
-
+###########################
 
 print("-----------PC 검색 음주 카테고리 비교 -------------------- ")
 
-client_id = input("id를 입력하세요 : ") #"rzF6rvrj3TniBxK_WrTw"
-client_secret = input("비밀번호를 입력하세요 : ")  #"xeMb9gVdrv"
+client_id = input("id를 입력하세요 : ") 
+client_secret = input("비밀번호를 입력하세요 : ") 
 url = "https://openapi.naver.com/v1/datalab/search"
 body = "{\"startDate\":\"2022-12-01\",\"endDate\":\"2022-12-31\",\"timeUnit\":\"date\",\"keywordGroups\":[{\"groupName\":\"음주운전\",\"keywords\":[\"음주운전\"]},{\"groupName\":\"음주행정\",\"keywords\":[\"음주행정\"]},{\"groupName\":\"음주형사\",\"keywords\":[\"음주형사\"]},{\"groupName\":\"대구음주운전전문\",\"keywords\":[\"대구음주운전전문\"]},{\"groupName\":\"음주운전변호사\",\"keywords\":[\"음주운전변호사\"]}],\"device\":\"pc\"}";
 request = urllib.request.Request(url)
@@ -498,7 +509,7 @@ merge_outer222p=pd.merge(cp2,dp2, how='outer', on='date')
 merge_outer333p=pd.merge(merge_outer111p,merge_outer222p, how='outer', on='date')
 totalp2=pd.merge(merge_outer333p,ep2, how='outer', on='date')
 
-
+#############################
 
 merge_01p=pd.merge(totalp,totalp1, how='outer', on='date')
 total012p=pd.merge(merge_01p,totalp2, how='outer', on='date')
@@ -529,6 +540,7 @@ total012p['대구음주운전전문비율']=(total012p['대구음주운전전문
 total012p['음주운전변호사비율']=(total012p['음주운전변호사']/total012p['합계'])*100
 
 
+##########################
 
 print("---------------PC검색 회생 카테고리 안에서 각 키워드가 차지하는 비율------------------")
 totalp=totalp.fillna(0)
@@ -540,6 +552,7 @@ totalp['개인회생신청자격비율']=(totalp['개인회생신청자격']/tot
 totalp['개인회생전문비율']=(totalp['개인회생전문']/totalp['합계'])*100
 
 
+##########################
 
 print("---------------PC검색 이혼 카테고리 안에서 각 키워드가 차지하는 비율------------------")
 totalp1=totalp1.fillna(0)
@@ -551,6 +564,7 @@ totalp1['이혼전문변호사비율']=(totalp1['이혼전문변호사']/totalp1
 totalp1['이혼변호사비율']=(totalp1['이혼변호사']/totalp1['합계'])*100
 
 
+##############################
 
 print("---------------PC검색 음주 카테고리 안에서 각 키워드가 차지하는 비율------------------")
 totalp2=totalp2.fillna(0)
@@ -562,11 +576,13 @@ totalp2['대구음주운전전문비율']=(totalp2['대구음주운전전문']/t
 totalp2['음주운전변호사비율']=(totalp2['음주운전변호사']/totalp2['합계'])*100
 
 
+##########################################
+
 
 print("-----------Mobile 검색 회생 카테고리 비교 -------------------- ")
 
-client_id = input("id를 입력하세요 : ") #"rzF6rvrj3TniBxK_WrTw"
-client_secret = input("비밀번호를 입력하세요 : ")  #"xeMb9gVdrv"
+client_id = input("id를 입력하세요 : ") 
+client_secret = input("비밀번호를 입력하세요 : ") 
 url = "https://openapi.naver.com/v1/datalab/search"
 body = "{\"startDate\":\"2022-12-01\",\"endDate\":\"2022-12-31\",\"timeUnit\":\"date\",\"keywordGroups\":[{\"groupName\":\"개인회생\",\"keywords\":[\"개인회생\"]},{\"groupName\":\"대구개인회생\",\"keywords\":[\"대구개인회생\"]},{\"groupName\":\"대구개인회생전문\",\"keywords\":[\"대구개인회생전문\"]},{\"groupName\":\"개인회생신청자격\",\"keywords\":[\"개인회생신청자격\"]},{\"groupName\":\"개인회생전문\",\"keywords\":[\"개인회생전문\"]}],\"device\":\"mo\"}";
 request = urllib.request.Request(url)
@@ -618,11 +634,12 @@ totalm=pd.merge(merge_outer3m,em, how='outer', on='date')
 
 
 
+####################################
 
 print("-----------Mobile 검색 이혼 카테고리 비교 -------------------- ")
 
-client_id = input("id를 입력하세요 : ") #"rzF6rvrj3TniBxK_WrTw"
-client_secret = input("비밀번호를 입력하세요 : ")  #"xeMb9gVdrv"
+client_id = input("id를 입력하세요 : ") 
+client_secret = input("비밀번호를 입력하세요 : ") 
 url = "https://openapi.naver.com/v1/datalab/search"
 body = "{\"startDate\":\"2022-12-01\",\"endDate\":\"2022-12-31\",\"timeUnit\":\"date\",\"keywordGroups\":[{\"groupName\":\"대구이혼변호사\",\"keywords\":[\"대구이혼변호사\"]},{\"groupName\":\"대구이혼전문변호사\",\"keywords\":[\"대구이혼전문변호사\"]},{\"groupName\":\"대구이혼상담\",\"keywords\":[\"대구이혼상담\"]},{\"groupName\":\"이혼전문변호사\",\"keywords\":[\"이혼전문변호사\"]},{\"groupName\":\"이혼변호사\",\"keywords\":[\"이혼변호사\"]}],\"device\":\"mo\"}";
 request = urllib.request.Request(url)
@@ -674,11 +691,13 @@ merge_outer33m=pd.merge(merge_outer11m,merge_outer22m, how='outer', on='date')
 totalm1=pd.merge(merge_outer33m,em1, how='outer', on='date')
 
 
+####################################
+
 
 print("-----------Mobile 검색 음주 카테고리 비교 -------------------- ")
 
-client_id = input("id를 입력하세요 : ") #"rzF6rvrj3TniBxK_WrTw"
-client_secret = input("비밀번호를 입력하세요 : ")  #"xeMb9gVdrv"
+client_id = input("id를 입력하세요 : ")
+client_secret = input("비밀번호를 입력하세요 : ")
 url = "https://openapi.naver.com/v1/datalab/search"
 body = "{\"startDate\":\"2022-12-01\",\"endDate\":\"2022-12-31\",\"timeUnit\":\"date\",\"keywordGroups\":[{\"groupName\":\"음주운전\",\"keywords\":[\"음주운전\"]},{\"groupName\":\"음주행정\",\"keywords\":[\"음주행정\"]},{\"groupName\":\"음주형사\",\"keywords\":[\"음주형사\"]},{\"groupName\":\"대구음주운전전문\",\"keywords\":[\"대구음주운전전문\"]},{\"groupName\":\"음주운전변호사\",\"keywords\":[\"음주운전변호사\"]}],\"device\":\"mo\"}";
 request = urllib.request.Request(url)
@@ -730,7 +749,7 @@ merge_outer333m=pd.merge(merge_outer111m,merge_outer222m, how='outer', on='date'
 totalm2=pd.merge(merge_outer333m,em2, how='outer', on='date')
 
 
-
+###############################
 
 merge_01m=pd.merge(totalm,totalm1, how='outer', on='date')
 total012m=pd.merge(merge_01m,totalm2, how='outer', on='date')
@@ -761,6 +780,7 @@ total012m['대구음주운전전문비율']=(total012m['대구음주운전전문
 total012m['음주운전변호사비율']=(total012m['음주운전변호사']/total012m['합계'])*100
 
 
+#################################
 
 print("---------------Mobile검색 회생 카테고리 안에서 각 키워드가 차지하는 비율------------------")
 totalm=totalm.fillna(0)
@@ -772,6 +792,7 @@ totalm['개인회생신청자격비율']=(totalm['개인회생신청자격']/tot
 totalm['개인회생전문비율']=(totalm['개인회생전문']/totalm['합계'])*100
 
 
+##########################################
 
 print("---------------Mobile검색 이혼 카테고리 안에서 각 키워드가 차지하는 비율------------------")
 totalm1=totalm1.fillna(0)
@@ -783,6 +804,7 @@ totalm1['이혼전문변호사비율']=(totalm1['이혼전문변호사']/totalm1
 totalm1['이혼변호사비율']=(totalm1['이혼변호사']/totalm1['합계'])*100
 
 
+#####################################
 
 print("---------------Mobile검색 음주 카테고리 안에서 각 키워드가 차지하는 비율------------------")
 totalm2=totalm2.fillna(0)
@@ -792,11 +814,3 @@ totalm2['음주행정비율']=(totalm2['음주행정']/totalm2['합계'])*100
 totalm2['음주형사비율']=(totalm2['음주형사']/totalm2['합계'])*100
 totalm2['대구음주운전전문비율']=(totalm2['대구음주운전전문']/totalm2['합계'])*100
 totalm2['음주운전변호사비율']=(totalm2['음주운전변호사']/totalm2['합계'])*100
-
-
-
-
-
-
-
-

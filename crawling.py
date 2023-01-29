@@ -11,6 +11,7 @@ import time
 now = datetime.datetime.now()
 nowDate = now.strftime('%Y년 %m월 %d일 %H시 %M분 %S초')
 
+###############################
 
 data=[]
 print('--------------파워링크 크롤링 -----------------------')
@@ -29,6 +30,7 @@ result = pd.DataFrame(data, columns=["time","keyword","rank","title"])
 ans = result.loc[result.title.str.contains('스타 법무법인')|result.title.str.contains('리본회생파산')|result.title.str.contains('리본이혼')]
 
 
+######################################
 
 data1=[]
 print('------------------------------1페이지 크롤링-----------------------------------------')
@@ -82,6 +84,7 @@ for e, item in enumerate(items,1):
 result1 = pd.DataFrame(data1, columns=["keyword","tema","page","순위","title"])
 ans1 = result1.loc[result1.title.str.contains('스타 법무법인')|result1.title.str.contains('리본회생파산')|result1.title.str.contains('리본이혼')]
 
+#########################################
 
 data2=[]
 
@@ -110,4 +113,4 @@ for i in range(1,130,15):
 
 
 result2 = pd.DataFrame(data2, columns=["keyword","page","rank","title","link"])
-ans2 = result.loc[result2.title.str.contains('스타 법무법인')|result2.title.str.contains('리본회생파산')|result2.title.str.contains('리본이혼')]
+ans2 = result2.loc[result2.title.str.contains('스타 법무법인')|result2.title.str.contains('리본회생파산')|result2.title.str.contains('리본이혼')]
